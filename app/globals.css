@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* Dark mode aktif kalau <html> punya class "dark" */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light mode sengaja ga putih polos: krem hangat biar ga silau di mata */
+:root {
+  --background: #f3f1ec;
+  --foreground: #1c1917;
+  --muted: #57534e;
+  --border: #dedad2;
+  --card: #faf8f4;
+  --accent: #b23c0b;
+  --accent-soft: #f8e6d6;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  --muted: #a1a1aa;
+  --border: #27272a;
+  --card: #18181b;
+  --accent: #fb923c;
+  --accent-soft: #431407;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-space-grotesk);
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-blink: blink 1s step-end infinite;
+}
+
+/* Pola grid kotak-kotak, dipakai di hero, foto, dan cover project */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Kursor kedip on/off kayak terminal */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
