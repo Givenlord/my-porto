@@ -1,14 +1,12 @@
 import Link from "next/link";
 import Avatar from "@/components/Avatar";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectGrid from "@/components/ProjectGrid";
 import SectionHeading from "@/components/SectionHeading";
 import TypingText from "@/components/TypingText";
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 
 export default function Home() {
-  const featured = projects.filter((project) => project.featured);
-
   return (
     <div className="flex flex-col gap-24">
       <section className="relative isolate grid animate-fade-up items-center gap-10 pt-6 sm:grid-cols-[1fr_auto] sm:pt-12">
@@ -59,11 +57,7 @@ export default function Home() {
             View all →
           </Link>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
+        <ProjectGrid fallback={projects} featuredOnly />
       </section>
     </div>
   );

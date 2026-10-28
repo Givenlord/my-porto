@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import SectionHeading from "@/components/SectionHeading";
+import SkillGrid from "@/components/SkillGrid";
 import { profile } from "@/data/profile";
-import { skillCategories, skills } from "@/data/skills";
+import { skills } from "@/data/skills";
 
 export const metadata: Metadata = {
   title: "About",
@@ -29,20 +30,7 @@ export default function AboutPage() {
 
       <section className="flex animate-fade-up flex-col gap-6 [animation-delay:150ms]">
         <SectionHeading index="01" title="Skills" />
-        <div className="grid gap-4 sm:grid-cols-3">
-          {skillCategories.map((category) => (
-            <div key={category} className="rounded-xl border border-border bg-card p-5">
-              <h3 className="mb-3 font-semibold">{category}</h3>
-              <ul className="flex flex-col gap-1.5 text-sm text-muted">
-                {skills
-                  .filter((skill) => skill.category === category)
-                  .map((skill) => (
-                    <li key={skill.name}>{skill.name}</li>
-                  ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <SkillGrid fallback={skills} />
       </section>
     </div>
   );
