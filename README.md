@@ -14,7 +14,7 @@ Website portfolio pribadi Given Lord, dibuat dengan Next.js (App Router), React,
 
 ## Data dari API
 
-Halaman Home, Projects, detail project, dan About mengambil projects dan skills dari API Part C (lihat [`../api`](../api)). Kalau API tidak bisa dihubungi, halaman menampilkan data lokal dari `data/` disertai catatan singkat, jadi website tidak pernah rusak. Ini juga yang terjadi di website Vercel.
+Halaman Home, Projects, detail project, dan About mengambil projects dan skills dari API Part C (folder `api` di repo tugas magang). Kalau API tidak bisa dihubungi, halaman menampilkan data lokal dari `data/` disertai catatan singkat, jadi website tidak pernah rusak. Ini juga yang terjadi di website Vercel.
 
 Alamat API bawaannya `http://localhost:4000` dan bisa diganti lewat `NEXT_PUBLIC_API_URL` (lihat `.env.example`).
 
