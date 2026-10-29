@@ -1,31 +1,38 @@
 # My Portfolio
 
-Personal portfolio website of Given Lord, built with Next.js (App Router), React and TypeScript.
+Website portfolio pribadi Given Lord, dibuat dengan Next.js (App Router), React, dan TypeScript.
 
-**Live website:** https://givenlord.vercel.app/
+**Website:** https://givenlord.vercel.app/
 
-## Features
+## Fitur
 
-- 4 pages: Home, About, Projects, Contact
-- A detail page for every project at `/projects/[slug]`
-- Typed project and skill data, kept separate from the components
-- Responsive layout for phones and laptops
-- Dark mode toggle and simple animations
+- 4 halaman: Home, About, Projects, Contact
+- Halaman detail untuk setiap project di `/projects/[slug]`
+- Data project dan skill punya tipe, dan dipisah dari komponen
+- Tampilan responsif untuk HP dan laptop
+- Tombol dark mode dan animasi sederhana
 
-## Data from the API
+## Data dari API
 
-The Home, Projects, project detail and About pages load their projects and skills from the Part C API (see [`../api`](../api)). If the API cannot be reached, the pages show the local data from `data/` with a short note, so the site never breaks. This is also what happens on the deployed Vercel site.
+Halaman Home, Projects, detail project, dan About mengambil projects dan skills dari API Part C (lihat [`../api`](../api)). Kalau API tidak bisa dihubungi, halaman menampilkan data lokal dari `data/` disertai catatan singkat, jadi website tidak pernah rusak. Ini juga yang terjadi di website Vercel.
 
-The API address defaults to `http://localhost:4000` and can be changed with `NEXT_PUBLIC_API_URL` (see `.env.example`).
+Alamat API bawaannya `http://localhost:4000` dan bisa diganti lewat `NEXT_PUBLIC_API_URL` (lihat `.env.example`).
 
-## Project structure
+## Menjalankan
 
-```
-app/          Pages (each folder with a page.tsx is a route)
-components/   Reusable UI pieces (Header, Footer, ProjectCard, ...)
-lib/          Fetching data from the API, with local fallback
-data/         Website content: profile, projects, skills, navigation
-types/        TypeScript types (Project, Skill, Profile)
+```bash
+npm install
+npm run dev
 ```
 
+Lalu buka http://localhost:3000.
 
+## Struktur folder
+
+```
+app/          halaman (setiap folder yang punya page.tsx adalah satu route)
+components/   bagian UI yang dipakai ulang (Header, Footer, ProjectCard, ...)
+lib/          mengambil data dari API, dengan data lokal sebagai cadangan
+data/         isi website: profil, projects, skills, navigasi
+types/        tipe TypeScript (Project, Skill, Profile)
+```
