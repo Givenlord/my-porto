@@ -3,6 +3,16 @@ import type { Project } from "@/types";
 // slug dipakai buat URL /projects/<slug>, jadi harus unik
 export const projects: Project[] = [
   {
+    slug: "turtle-multiplayer",
+    title: "Turtle Multiplayer",
+    summary: "A two-player web game: two people on two devices drive two turtles in ROS turtlesim.",
+    description:
+      "A web game for two players on two different IP addresses. Each browser connects over WebSocket to a TypeScript gateway, and only the gateway talks to ROS 2 through rosbridge. The gateway picks the role from the IP address of the connection: the first IP drives turtle1 with W A S D, the second drives turtle2 with on-screen arrow buttons, and anyone else watches. Every command is validated and its speed is limited, and a turtle stops when the key is released, when the page stops sending, or when the player disconnects. Both pages show the two turtles moving in real time.",
+    tech: ["TypeScript", "ROS 2", "Next.js", "WebSocket"],
+    year: 2026,
+    featured: true,
+  },
+  {
     slug: "portfolio-website",
     title: "Portfolio Website",
     summary: "The website you are looking at right now.",
