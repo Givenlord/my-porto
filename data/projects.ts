@@ -36,7 +36,7 @@ export const projects: Project[] = [
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     year: 2026,
     repoUrl: "https://github.com/Givenlord/my-porto",
-    liveUrl: "https://my-porto-sepia-gamma.vercel.app",
+    liveUrl: "https://given-lord.vercel.app",
     featured: true,
   },
   {

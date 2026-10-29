@@ -2,7 +2,7 @@
 
 Website portfolio pribadi Given Lord, dibuat dengan Next.js (App Router), React, dan TypeScript.
 
-**Website:** https://givenlord.vercel.app/
+**Website:** https://given-lord.vercel.app/
 
 ## Fitur
 
