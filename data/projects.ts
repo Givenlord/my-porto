@@ -11,6 +11,20 @@ export const projects: Project[] = [
     tech: ["TypeScript", "ROS 2", "Next.js", "WebSocket"],
     year: 2026,
     image: "/projects/turtle-multiplayer.png",
+    gallery: [
+      {
+        src: "/projects/turtle-multiplayer/player1-laptop.png",
+        caption: "Player 1 on the laptop drives turtle1 with W A S D.",
+      },
+      {
+        src: "/projects/turtle-multiplayer/player2-hp.jpg",
+        caption: "Player 2 on a phone (another IP) drives turtle2 with the arrow buttons.",
+      },
+      {
+        src: "/projects/turtle-multiplayer/gateway-log.png",
+        caption: "The gateway log gives each IP address its own role.",
+      },
+    ],
     featured: true,
   },
   {

@@ -9,7 +9,14 @@ export type Project = {
   liveUrl?: string;
   // path gambar di public/, contoh "/projects/bfs.png"
   image?: string;
+  // screenshot tambahan yang tampil di halaman detail
+  gallery?: GalleryImage[];
   featured?: boolean;
+};
+
+export type GalleryImage = {
+  src: string;
+  caption: string;
 };
 
 export type SkillCategory = "Language" | "Framework & Tools" | "Robotics";

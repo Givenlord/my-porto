@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProjectCover from "@/components/ProjectCover";
+import ProjectGallery from "@/components/ProjectGallery";
 import TechList from "@/components/TechList";
 import type { Project } from "@/types";
 
@@ -18,6 +19,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
       <ProjectCover project={project} sizes="(min-width: 896px) 832px, 100vw" />
       <TechList tech={project.tech} />
       <p className="max-w-2xl leading-relaxed">{project.description}</p>
+      {project.gallery && project.gallery.length > 0 && <ProjectGallery images={project.gallery} />}
       {(project.repoUrl || project.liveUrl) && (
         <div className="flex flex-col gap-3 sm:flex-row">
           {project.repoUrl && (
