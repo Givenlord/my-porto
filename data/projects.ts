@@ -10,6 +10,7 @@ export const projects: Project[] = [
       "A web game for two players on two different IP addresses. Each browser connects over WebSocket to a TypeScript gateway, and only the gateway talks to ROS 2 through rosbridge. The gateway picks the role from the IP address of the connection: the first IP drives turtle1 with W A S D, the second drives turtle2 with on-screen arrow buttons, and anyone else watches. Every command is validated and its speed is limited, and a turtle stops when the key is released, when the page stops sending, or when the player disconnects. Both pages show the two turtles moving in real time.",
     tech: ["TypeScript", "ROS 2", "Next.js", "WebSocket"],
     year: 2026,
+    image: "/projects/turtle-multiplayer.png",
     featured: true,
   },
   {
